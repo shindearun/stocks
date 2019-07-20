@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StocksService, StockInterface } from '../../services/stocks.service';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
