@@ -13,6 +13,11 @@ import { ManageComponent } from './components/manage/manage.component';
 import { CardTypeDirective } from './directives/card-type.directive';
 import { CardHoverDirective } from './directives/card-hover.directive';
 import { DelayDirective } from './directives/delay.directive';
+import { ChangePipe } from './pipes/change.pipe';
+import { CurrencyPipe, PercentPipe } from '@angular/common';
+import { ChangeDetectorPipe } from './pipes/change-detector.pipe';
+import { NewsPipe } from './pipes/news.pipe';
+
 
 
 
@@ -24,7 +29,10 @@ import { DelayDirective } from './directives/delay.directive';
     ManageComponent,
     CardTypeDirective,
     CardHoverDirective,
-    DelayDirective
+    DelayDirective,
+    ChangePipe,
+    ChangeDetectorPipe,
+    NewsPipe
   ],
   imports: [
     BrowserModule,
@@ -33,7 +41,7 @@ import { DelayDirective } from './directives/delay.directive';
     BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [StocksService],
+  providers: [StocksService, CurrencyPipe, PercentPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
