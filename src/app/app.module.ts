@@ -17,6 +17,8 @@ import { ChangePipe } from './pipes/change.pipe';
 import { CurrencyPipe, PercentPipe } from '@angular/common';
 import { ChangeDetectorPipe } from './pipes/change-detector.pipe';
 import { NewsPipe } from './pipes/news.pipe';
+import { AsyncPromiseComponent } from './components/async-promise/async-promise.component';
+import { AsyncObservableComponent } from './components/async-observable/async-observable.component';
 
 
 
@@ -32,7 +34,9 @@ import { NewsPipe } from './pipes/news.pipe';
     DelayDirective,
     ChangePipe,
     ChangeDetectorPipe,
-    NewsPipe
+    NewsPipe,
+    AsyncPromiseComponent,
+    AsyncObservableComponent
   ],
   imports: [
     BrowserModule,

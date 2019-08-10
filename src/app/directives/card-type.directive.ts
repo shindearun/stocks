@@ -7,7 +7,7 @@ export class CardTypeDirective implements OnInit {
   @Input() cardType = 0;
   @Input() increaseClass = 'increase';
   @Input() decreaseClass = 'decrease';
-  card : any;
+  card: any;
 
   constructor(private el: ElementRef) { }
 
