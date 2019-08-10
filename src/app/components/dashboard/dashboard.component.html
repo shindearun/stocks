@@ -3,6 +3,6 @@
     Loading     
   </div>     
   <div class="mdl-cell mdl-cell--3-col" *ngFor="let stock of stocks; index as i">     
-    <summary [stock]="stock" *delay="i * 1000" cardHover></summary>
+    <summary [stock]="stock" *delay="i * 1000" [cardType]="stock.change" ></summary>
   </div>
 </div>

@@ -10,7 +10,11 @@ export class CardHoverDirective implements OnInit {
   constructor(private el: ElementRef) { }
 
   ngOnInit() {
-    this.card = this.el.nativeElement.querySelector('.mdl-card');
+    this.card = this.el.nativeElement;
+    console.log('in Card hover oninit');
+
+
+
 
     if (this.card.classList.contains('increase')) {
       this.card.style.backgroundColor = 'rgb(63,81,181)';
@@ -19,6 +23,7 @@ export class CardHoverDirective implements OnInit {
     } else {
       this.card.style.backgroundColor = '';
     }
+
   }
 
   @HostListener('mouseover') onMouseOver() {

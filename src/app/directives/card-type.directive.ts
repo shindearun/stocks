@@ -7,20 +7,24 @@ export class CardTypeDirective implements OnInit {
   @Input() cardType = 0;
   @Input() increaseClass = 'increase';
   @Input() decreaseClass = 'decrease';
+  card : any;
 
   constructor(private el: ElementRef) { }
 
   ngOnInit() {
+    console.log('in Card Type oninit');
+
     if (this.cardType) {
+      this.card = this.el.nativeElement.querySelector('.mdl-card');
       if (this.cardType >= 0) {
-        this.el.nativeElement.classList.add(this.increaseClass);
-        this.el.nativeElement.classList.remove(this.decreaseClass);
+        this.card.classList.add(this.increaseClass);
+        this.card.classList.remove(this.decreaseClass);
       } else if (this.cardType <= 0) {
-        this.el.nativeElement.classList.add(this.decreaseClass);
-        this.el.nativeElement.classList.remove(this.increaseClass);
+        this.card.classList.add(this.decreaseClass);
+        this.card.classList.remove(this.increaseClass);
       } else {
-        this.el.nativeElement.classList.remove(this.increaseClass);
-        this.el.nativeElement.classList.remove(this.decreaseClass);
+        this.card.classList.remove(this.increaseClass);
+        this.card.classList.remove(this.decreaseClass);
       }
     }
   }
